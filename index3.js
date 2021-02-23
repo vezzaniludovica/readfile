@@ -1,0 +1,6 @@
+const fs= require("fs")
+const util= require("util")
+const readFileP= util.promisify(fs.readFile)
+readFileP("testo.txt","utf-8")
+.then(data=>console.log(data))
+.catch(err=>console.log(err))
